@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang ="fr" xmlns:th="http://wwww.thymeleaf.org">
+
+	<head>
+		<title>L'Adresse</title>
+		<meta charset="utf-8">
+		<link rel="shortcut icon" type = "image/x-icon" href = "img/logo_position.png"><!--logo affiché à coté du titre de la page-->
+		<link rel="stylesheet" href="css/adresse.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!-- utilisation d'une librairie pour les logos des réseaux sociaux dans le footer-->
+	    <script src="js/main.js"></script>
+    </head>
+
+	<body>
+
+		<!-- Menu de navigation en haut de la fenêtre-->
+		<header th:insert="~{fragments :: menu}"></header>
+
+		<section id = "corps">
+
+			<section class = "ensemble_adresse"><!-- conteneur des adresses d'un même type -->
+
+				<h1>Venez découvrir nos Bars</h1>
+
+				<h2 id = "bar">Cliquez sur les liens pour découvrir nos articles !</h2>
+
+				<!-- Liste des différents articles présents en base de données, en fonction de leur type. Ici : liste des bars-->
+
+				<div th:each="article : ${listBar}">
+					<button class="derouleur" th:id="${article.id}">
+
+						<a class = "lien_article" th:href="'article?id='+${article.id}">
+
+							<div class = conteneur_titre>
+
+								<div class = "nom_adresse">
+									<p th:text="${article.Nom}">Nom bar</p>
+								</div>
+
+								<!-- Affichage du nombre de like et dislike par article -->
+
+								<figure th:replace="~{fragments :: avis}" class = "avis"></figure>
+
+							</div>
+						</a>
+
+					</button>
+
+				</div>
+
+			</section>
+
+			<h3>Vous souhaitez nous recommander une adresse ? C'est par ici que ça se passe !</h3>
+
+			<!--Boutton permettant d'ouvrir un formulaire afin de recommander une adresse aux administrateurs du site-->
+
+			<button class = "dérouleur commentaire" onclick="document.getElementById('id02').style.display='block'" style="width:20%;outline: none;margin-left:40%"><span>Recommander</span></button>
+
+			<!-- fragment du formulaire de recommandation-->
+
+			<div th:replace="~{fragments :: recommander}" id="id02" class="modal"></div>
+
+			<!-- Script permettant d'afficher le formulaire de recommandation lors du clique sur le boutton associé-->
+
+			<script>
+			// Get the modal
+			var modal_2 = document.getElementById('id02');
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+			    if (event.target == modal_2) {
+			        modal_2.style.display = "none";
+			    }
+			}
+			</script>
+
+		</section>
+	</section>
+
+		<hr><!-- ligne de démarcation du footer -->
+
+		<!-- Footer contenant un lien vers différents supports de l'adresse -->
+
+		<footer th:replace="~{fragments :: footer}"></footer>
+
+	</body>
+
+</html>

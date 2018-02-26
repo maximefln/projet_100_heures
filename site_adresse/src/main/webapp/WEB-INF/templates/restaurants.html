@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang ="fr" xmlns:th="http://wwww.thymeleaf.org">
+
+	<head>
+		<title>L'Adresse</title>
+		<meta charset="utf-8">
+		<link rel="shortcut icon" type = "image/x-icon" href = "img/logo_position.png"><!--logo affiché à coté du titre de la page-->
+		<link rel="stylesheet" href="css/adresse.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!-- utilisation d'une librairie pour les logos des réseaux sociaux dans le footer-->
+	</head>
+
+	<body>
+
+		<!-- Menu de navigation en haut de la fenêtre-->
+
+		<header th:insert="~{fragments :: menu}"></header>
+
+		<section id = "corps">
+
+			<!-- conteneur des adresses d'un même type -->
+
+			<section class = "ensemble_adresse">
+
+				<h1>Venez découvrir nos restaurants</h1>
+
+				<h2 id = "bar">Cliquez sur les liens pour découvrir nos articles !</h2>
+				<div th:each="article : ${listRestaurant}">
+					<button class="derouleur" th:id="${article.id}">
+
+						<a class = "lien_article" th:href="'article?id='+${article.id}">
+
+							<div class = conteneur_titre>
+
+								<div class = "nom_adresse">
+									<p th:text="${article.Nom}">Nom bar</p>
+								</div>
+
+								<figure th:replace="~{fragments :: avis}" class = "avis"></figure>
+
+							</div>
+						</a>
+
+					</button>
+
+				</div>
+
+			</section>
+
+			<h3>Vous souhaitez nous recommander une adresse ? C'est par ici que ça se passe !</h3>
+			<button class = "dérouleur commentaire" onclick="document.getElementById('id02').style.display='block'" style="width:20%;outline: none;margin-left:40%"><span>Recommander</span></button>
+
+			<div th:replace="~{fragments :: recommander}" id="id02" class="modal"></div>
+
+			<script>
+			// Get the modal
+			var modal_2 = document.getElementById('id02');
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+			    if (event.target == modal_2) {
+			        modal_2.style.display = "none";
+			    }
+			}
+			</script>
+
+		</section>
+
+		<hr><!-- ligne de démarcation du footer -->
+
+		<!-- Footer contenant un lien vers différents supports de l'adresse -->
+
+		<footer th:replace="~{fragments :: footer}"></footer>
+
+	</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang ="fr" xmlns:th="http://wwww.thymeleaf.org">
+
+    <head>
+        <title>L'Adresse</title>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" type = "image/x-icon" href = "img/logo_position.png"><!--logo affiché à coté du titre de la page-->
+        <link rel="stylesheet" href="css/styleprincipale.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!-- utilisation d'une librairie pour les logos des réseaux sociaux dans le footer-->
+    </head>
+
+    <body>
+
+        <!-- Menu de navigation en haut de la fenêtre-->
+
+        <header th:insert="~{fragments :: menu}"></header>
+
+        <!-- Formulaire permettant de se connecter à la partie administrateur -->
+
+        <form class="modal-content animate" method="POST">
+            <div class="container">
+                <label><b>Identifiant</b></label>
+                <input class = "admin_form" type="text" placeholder="Enter Username" name="id" id="id" required>
+
+                <label><b>Password</b></label>
+                <input class = "admin_form" type="password" placeholder="Enter Password" name="mdp" id="mdp" required>
+
+                <!-- Boutton permettant d'envoyer le formulaire-->
+
+                <button id = "validation" type="submit">Login</button>
+            </div>
+
+            <!-- Boutton permettant d'annuler la connexion et de revenir à la page d'accueil -->
+
+            <div class="container" style="background-color:#f1f1f1">
+                <a class="cancelbtn" href="accueil" style="text-decoration: none;">Annuler</a>
+            </div>
+        </form>
+    </body>
+
+</html>

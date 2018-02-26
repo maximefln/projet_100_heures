@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns:th="http/www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Fragments layout</title>
+</head>
+<body>
+
+    <!-- fragment permettant d'afficher un menu identique sur toutes les pages-->
+
+    <header th:fragment="menu">
+        <nav class="menu_principal">
+            <div class="boite_menu"><!-- boite qui contient les liens vers les autres pages pour les centrer-->
+                <a href="accueil">ACCUEIL</a>
+                <div class="menu_deroulant">
+                    <button class="bouton_deroulant">ADRESSES</button><!-- Menu déroulant contenant les ancres vers les differentes catégories de la page "adresses.html"-->
+                    <div class="categories">
+                        <a href="bar">Bars</a>
+                        <a href="restaurant">Restaurants</a>
+                        <a href="musee">Musées</a>
+                    </div>
+                </div>
+                <a href="equipe">L'EQUIPE</a>
+                <a href="contact">CONTACTER</a>
+                <a href="connexion">ADMIN</a>
+            </div>
+
+            <div id="barre_container"><!-- integration de la barre de recherche dans le menu -->
+                <form>
+                    <input id="barre_de_recherche" type="text" name="chercher" placeholder="Chercher">
+                </form>
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- fragment permettant d'afficher les commentaires des articles sous le même format -->
+
+    <div th:fragment="commentaires(nom, commentaire)" class = "un_commentaire">
+        <p th:text="${nom}" class = "titre">Prénom Nom<small><i>date</i></small></p>
+        <p th:text="${commentaire}" class = "commentaire_texte"></p>
+    </div>
+
+    <!-- fragment permettant d'afficher le nombre de like et de dislike associé à chaque article sur la page de rpésentation de tous les articles de même type -->
+
+    <figure th:fragment="avis" class = "avis">
+        <div class = "like">
+            <img src = "img/articles/like.png" alt = "like">
+            <p th:text=${article.nb_like} class = "nbr_like_dislike">14</p>
+        </div>
+
+        <div class = "dislike" >
+            <img src = "img/articles/dislike.png" alt="dislike">
+            <p th:text="${article.nbdislike}" class = "nbr_like_dislike">3</p>
+        </div>
+    </figure>
+
+    <!-- fragment permettant d'afficher le formulaire pour recommander une adresse -->
+
+    <div th:fragment="recommander" id="id02" class="modal">
+        <form class="modal-content_2 animate" method="POST">
+
+            <div class="container">
+                <label><b>Nom</b></label>
+                <input class = "admin_form" type="text" placeholder="Entrez votre nom" name="nom" required>
+
+                <label><b>Prénom</b></label>
+                <input class = "admin_form" type="text" placeholder="Entrez votre prénom" name="prenom" required>
+
+                <label><b>Mail</b></label>
+                <input class = "admin_form" type="email" placeholder="Entrez votre email" name="mail" required>
+
+                <label><b>Nom de l'adresse</b></label>
+                <input class = "admin_form" type="text" placeholder="Entrez le nom de l'adresse" name="adresse" required>
+
+                <label><b>Type de l'adresse</b></label>
+                <input class = "admin_form" type="text" placeholder="Type" name="type" list = "type" required>
+
+                <datalist id = "type">
+                    <option value = "Bar"></option>
+                    <option value = "Restaurant"></option>
+                    <option value = "Musée"></option>
+                    <option value = "Autre"></option>
+                </datalist>
+
+                <label><b>Nom de rue</b></label>
+                <input class = "admin_form" type="text" placeholder="Entrez le nom de la rue" name="rue" required>
+
+                <label><b>Numéro de rue</b></label>
+                <input class = "admin_form" type="number" placeholder="Entrez le numéro de la rue" name="numero" required>
+
+                <label><b>Ville</b></label>
+                <input class = "admin_form" type="text" placeholder="Entrez la ville" name="ville" required>
+
+                <input type="hidden" name="type_page" th:value="${type_page}">
+
+                <button class = "derouleur commentaire" type="submit"><span>Recommander</span></button>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Annuler</button>
+            </div>
+        </form>
+    </div>
+
+
+    <!-- fragment permettant d'afficher le footer en bas de chaque page-->
+
+    <footer th:fragment="footer">
+        <p><em>Venez nous suivre sur les réseaux sociaux !</em></p>
+        <a target = "_blank" href="https://www.facebook.com/ladresse.hei.3" class="fa fa-facebook"></a><!-- lien vers la page facebook de l'Adresse -->
+        <a target = "_blank" href = "http://www.twitter.fr" class = "fa fa-twitter"></a>
+        <a traget = "_blank" href = "https://play.google.com/store/apps/details?id=com.goodbarber.integralhei" class = "fa fa-android"></a>
+    </footer>
+
+</body>
+</html>

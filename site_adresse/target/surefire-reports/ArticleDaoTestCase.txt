@@ -1,12 +1,9 @@
 -------------------------------------------------------------------------------
 Test set: ArticleDaoTestCase
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 3.265 sec <<< FAILURE!
-shouldGetArticle(ArticleDaoTestCase)  Time elapsed: 1.234 sec  <<< ERROR!
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'adresse(
-`id` INT NOT NULL AUTO_INCREMENT,
-`date_ajout` date NULL,
-`Nom` VARCHAR' at line 1
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 3.312 sec <<< FAILURE!
+shouldGetArticle(ArticleDaoTestCase)  Time elapsed: 1.171 sec  <<< ERROR!
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'adresse' already exists
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -53,11 +50,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in 
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-shouldListArticle(ArticleDaoTestCase)  Time elapsed: 0.688 sec  <<< ERROR!
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'adresse(
-`id` INT NOT NULL AUTO_INCREMENT,
-`date_ajout` date NULL,
-`Nom` VARCHAR' at line 1
+shouldListArticle(ArticleDaoTestCase)  Time elapsed: 0.657 sec  <<< ERROR!
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'adresse' already exists
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -104,11 +98,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in 
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-shouldLikeArticle(ArticleDaoTestCase)  Time elapsed: 0.578 sec  <<< ERROR!
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'adresse(
-`id` INT NOT NULL AUTO_INCREMENT,
-`date_ajout` date NULL,
-`Nom` VARCHAR' at line 1
+shouldLikeArticle(ArticleDaoTestCase)  Time elapsed: 0.672 sec  <<< ERROR!
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'adresse' already exists
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -155,11 +146,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in 
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-shouldDislikeArticle(ArticleDaoTestCase)  Time elapsed: 0.687 sec  <<< ERROR!
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'adresse(
-`id` INT NOT NULL AUTO_INCREMENT,
-`date_ajout` date NULL,
-`Nom` VARCHAR' at line 1
+shouldDislikeArticle(ArticleDaoTestCase)  Time elapsed: 0.718 sec  <<< ERROR!
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'adresse' already exists
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)

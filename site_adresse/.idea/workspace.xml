@@ -15,9 +15,52 @@
       <file leaf-file-name="DataSourceProvider.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/DataSourceProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="22" column="36" lean-forward="false" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="52" />
+            <state relative-caret-position="408">
+              <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArticleDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/ArticleDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="277">
+              <caret line="124" column="38" lean-forward="true" selection-start-line="124" selection-start-column="38" selection-end-line="124" selection-end-column="38" />
+              <folding>
+                <marker date="1519649311238" expanded="true" signature="1093:1147" ph="SELECT * FRO... adresse" />
+                <marker date="1519649311238" expanded="true" signature="2881:2928" ph="UPDATE adresse... " />
+                <marker date="1519649311238" expanded="true" signature="3612:3663" ph="UPDATE adresse... " />
+                <marker date="1519649311238" expanded="true" signature="4460:4492" ph="SELECT * FRO... adresse" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommentaireDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/CommentaireDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="91" column="36" lean-forward="false" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="36" />
+              <folding>
+                <marker date="1519649311263" expanded="true" signature="876:930" ph="SELECT * FRO... commentaire" />
+                <marker date="1519649311263" expanded="true" signature="2435:2521" ph="INSERT INTO commentaire... " />
+                <marker date="1519649311263" expanded="true" signature="3391:3425" ph="DELETE FROM commentaire... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RecommandationDaoImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/RecommandationDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="102" column="36" lean-forward="false" selection-start-line="102" selection-start-column="36" selection-end-line="102" selection-end-column="36" />
+              <folding>
+                <marker date="1519649311213" expanded="true" signature="1028:1087" ph="SELECT * FRO... recommandation" />
+                <marker date="1519649311213" expanded="true" signature="2622:2727" ph="INSERT INTO recommandation... " />
+                <marker date="1519649311213" expanded="true" signature="3892:3929" ph="DELETE FROM recommandation... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArticleDaoTestCase.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ArticleDaoTestCase.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ArticleDaoTestCase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="57" column="56" lean-forward="true" selection-start-line="57" selection-start-column="56" selection-end-line="57" selection-end-column="56" />
+            <state relative-caret-position="391">
+              <caret line="38" column="17" lean-forward="false" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
               <folding>
                 <marker date="1519649178706" expanded="true" signature="808:1728" ph="CREATE TABLE... adresse" />
                 <marker date="1519649178706" expanded="true" signature="1769:2255" ph="CREATE TABLE... commentaire" />
@@ -89,6 +132,9 @@
         <option value="$PROJECT_DIR$/src/main/java/dao/DataSourceProvider.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/ArticleDaoTestCase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/ArticleDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/CommentaireDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/RecommandationDaoImpl.java" />
       </list>
     </option>
   </component>
@@ -294,12 +340,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1519648733003</updated>
-      <workItem from="1519648735472" duration="440000" />
+      <workItem from="1519648735472" duration="571000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="440000" />
+    <option name="totallyTimeSpent" value="571000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
@@ -346,14 +392,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/DataSourceProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="22" column="36" lean-forward="false" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/sql/creation_table.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="848">
@@ -381,8 +419,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ArticleDaoTestCase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="57" column="56" lean-forward="true" selection-start-line="57" selection-start-column="56" selection-end-line="57" selection-end-column="56" />
+        <state relative-caret-position="391">
+          <caret line="38" column="17" lean-forward="false" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
           <folding>
             <marker date="1519649178706" expanded="true" signature="808:1728" ph="CREATE TABLE... adresse" />
             <marker date="1519649178706" expanded="true" signature="1769:2255" ph="CREATE TABLE... commentaire" />
@@ -398,6 +436,51 @@
             <marker date="1519649178706" expanded="true" signature="7699:7731" ph="SELECT * FRO... adresse" />
             <marker date="1519649178706" expanded="true" signature="8833:8865" ph="SELECT * FRO... adresse" />
             <marker date="1519649178706" expanded="true" signature="9987:10019" ph="SELECT * FRO... adresse" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/DataSourceProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ArticleDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="124" column="38" lean-forward="true" selection-start-line="124" selection-start-column="38" selection-end-line="124" selection-end-column="38" />
+          <folding>
+            <marker date="1519649311238" expanded="true" signature="1093:1147" ph="SELECT * FRO... adresse" />
+            <marker date="1519649311238" expanded="true" signature="2881:2928" ph="UPDATE adresse... " />
+            <marker date="1519649311238" expanded="true" signature="3612:3663" ph="UPDATE adresse... " />
+            <marker date="1519649311238" expanded="true" signature="4460:4492" ph="SELECT * FRO... adresse" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/CommentaireDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="91" column="36" lean-forward="false" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="36" />
+          <folding>
+            <marker date="1519649311263" expanded="true" signature="876:930" ph="SELECT * FRO... commentaire" />
+            <marker date="1519649311263" expanded="true" signature="2435:2521" ph="INSERT INTO commentaire... " />
+            <marker date="1519649311263" expanded="true" signature="3391:3425" ph="DELETE FROM commentaire... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/RecommandationDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="102" column="36" lean-forward="false" selection-start-line="102" selection-start-column="36" selection-end-line="102" selection-end-column="36" />
+          <folding>
+            <marker date="1519649311213" expanded="true" signature="1028:1087" ph="SELECT * FRO... recommandation" />
+            <marker date="1519649311213" expanded="true" signature="2622:2727" ph="INSERT INTO recommandation... " />
+            <marker date="1519649311213" expanded="true" signature="3892:3929" ph="DELETE FROM recommandation... " />
           </folding>
         </state>
       </provider>

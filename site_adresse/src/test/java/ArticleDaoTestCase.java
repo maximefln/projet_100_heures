@@ -25,7 +25,7 @@ public class ArticleDaoTestCase {
                 Connection connection = DataSourceProvider.getDataSource().getConnection();
                 Statement statement = connection.createStatement();
         ) {
-            statement.executeUpdate("adresse(\n" +
+            statement.executeUpdate("CREATE TABLE adresse(\n" +
                             "`id` INT NOT NULL AUTO_INCREMENT,\n" +
                             "`date_ajout` date NULL,\n" +
                             "`Nom` VARCHAR(50) NOT NULL,\n" +

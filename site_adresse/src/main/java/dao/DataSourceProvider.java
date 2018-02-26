@@ -16,14 +16,14 @@ public class DataSourceProvider {
     public static DataSource getDataSource() {
         if (dataSource == null) {
             dataSource = new MysqlDataSource();
-            dataSource.setServerName("localhost");
+            dataSource.setServerName("\tr42ii9gualwp7i1y.chr7pe7iynqr.eu-west-1.rds.amazonaws.com");
             dataSource.setPort(3306);
-            dataSource.setDatabaseName("projet_100h");
+            dataSource.setDatabaseName("lprazoxf60p9ze12");
             dataSource.setUser("root");
             dataSource.setPassword("root");
             dataSource.setDatabaseName("mrn8uciy39g7i8fi");
-            dataSource.setUser("whecq0vmcott98zf");
-            dataSource.setPassword("oh5q75ezdls9w70y");
+            dataSource.setUser("b0lo5x6m6chv9lze");
+            dataSource.setPassword("q4vfx7c1t1baknc7");
         }
         return dataSource;
     }

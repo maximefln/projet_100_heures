@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang ="fr" xmlns:th="http://wwww.thymeleaf.org">
+
+    <head>
+        <title>L'Adresse</title>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" type = "image/x-icon" href = "img/logo_position.png"><!--logo affiché à coté du titre de la page-->
+        <link rel="stylesheet" href="css/adresse.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!-- utilisation d'une librairie pour les logos des réseaux sociaux dans le footer-->
+        <script src="js/main.js"></script>
+    </head>
+
+    <body>
+        <!-- fragment permettant d'afficher un menu identique sur toutes les pages-->
+
+        <header th:insert="~{fragments :: menu}"></header>
+
+            <div class="fiche">
+
+                <!-- lein dynamique qui permet d'afficher l'article de chaque adresse -->
+
+
+                <figure>
+                    <img class = "article_image" th:src="${article.lien_image}" alt="avis sur le point de départ">
+                </figure>
+
+                <div class = "informations">
+
+                    <!-- Script qui permet d'afficher ou de masquer la zone pour ajouter des commentaires, afin de gagner de l'espace sur la page -->
+
+                    <script>
+                        var acc1 = document.getElementsByClassName("derouleur commentaire");
+                        var i1;
+
+                        for (i1 = 0; i1 < acc1.length; i1++) {
+                            acc[i1].onclick = function() {
+                                this.classList.toggle("active");
+                                var panel1 = this.nextElementSibling;
+                                if (panel1.style.maxHeight){
+                                    panel1.style.maxHeight = null;
+                                } else {
+                                    panel1.style.maxHeight = panel1.scrollHeight + "px";
+                                }
+                            }
+                        }
+                    </script>
+
+                    <!-- Script qui permet d'afficher une carte de googlemap avec un marqueur sur l'adresse de l'article présenté -->
+
+                    <script th:inline="javascript">
+                        /*<![CDATA[*/
+                        function myMap_b() {
+
+                            var myCenter = new google.maps.LatLng(/*[[${article.coordonnee_x}]]*/'',/*[[${article.coordonnee_y}]]*/'');
+                            var mapOptions = {center: myCenter, zoom: 13};
+                            var map = new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+                            var marker = new google.maps.Marker({position: myCenter});
+                            marker.setMap(map);
+                        }
+                        /*]]>*/
+                    </script>
+
+                    <div class = "informations">
+                        <div id="googleMap" class = "googleMap" style="width:450px;height:450px;"></div>
+
+                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2mkwcbPGt6Hm9069FkJo3czQ96SKkpoE&callback=myMap_b"></script>
+
+                        <!-- Bouttons qui permettent de liker et déliker un article. Les boutons renvoient sur la page de présentation des articles afin de limiter le nombre de like par personne -->
+
+                    <figure class = "liker_deliker">
+                        <button class = "liker"><a th:href="'likebar?id='+${article.id}+'&type='+${article.type}" ><img src = "img/articles/like.png"></a></button>
+                        <button class = "deliker"><a th:href="'dislikebar?id='+${article.id}+'&type='+${article.type}"><img  src = "img/articles/dislike.png"></a></button>
+                    </figure>
+
+                    <div class = "commentaires">
+
+                        <button class = "derouleur commentaire"><span>Ajouter un commentaire</span></button>
+
+                        <!-- formulaire d'ajout de commentaires, caché par le bouton au dessus et dévoilé lorsqu'on clique sur le boutton -->
+
+                        <div class = "ajout_com">
+                            <form class="commentaire" method="POST">
+                                <div class="container">
+                                    <label><b>Prénom</b></label>
+                                    <input class = "admin_form" type="text" placeholder="Prénom" name="prenom" required>
+
+                                    <label><b>Nom</b></label>
+                                    <input class = "admin_form" type="text" placeholder="nom" name="nom" required>
+
+                                    <label><b>Commentaire</b></label>
+                                    <textarea class = "admin_form" type="text" placeholder="Votre commentaire" name = "commentaire" clos="100" required></textarea>
+
+                                    <input type="hidden" name="id_article" th:value="${article.id}">
+
+                                    <button class = "validation" type="submit">Ajouter mon commentaire</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Zone d'affichage des commentaires stockés en base de données, qui correspondent à l'article-->
+
+                        <div class = "les_commentaires">
+
+                            <div th:each="commentaire : ${listCommentaire}" th:if="${article.id == commentaire.id_article}" class = "un_commentaire">
+                                <p class = "titre">
+                                    <span th:text="${commentaire.prenom}" style="font-size: 0.8em">Prénom </span>
+                                    <span> </span>
+                                    <span th:text="${commentaire.nom}" style="font-size: 0.8em">Nom</span>
+                                    <span> </span>
+                                    <i><span th:text="${commentaire.date}" style="font-size: 0.5em"></span></i>
+                                </p>
+                                <p th:text="${commentaire.commentaire}" class = "commentaire_texte"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Boutton de retour permettant de retourner à la page de présentation de tous les articles-->
+
+
+        <hr><!-- ligne de démarcation du footer -->
+
+        <!-- Footer contenant un lien vers différents supports de l'adresse -->
+
+        <footer th:replace="~{fragments :: footer}"></footer>
+
+        <script>
+            var acc = document.getElementsByClassName("derouleur");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].onclick = function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight){
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                }
+            }
+        </script>
+
+    </body>
+
+</html>

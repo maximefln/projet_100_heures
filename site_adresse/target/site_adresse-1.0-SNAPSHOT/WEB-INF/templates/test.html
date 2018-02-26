@@ -1,0 +1,644 @@
+
+
+
+<div th:each="article : ${listBar}">
+	<button class="derouleur">
+
+		<div class = conteneur_titre>
+
+			<div class = "nom_adresse">
+				<p th:text="${article.Nom}">Nom bar</p>
+			</div>
+
+            <figure class = "avis">
+			    <div class = "like">
+			        <img src = "img/articles/like.png" alt = "like">
+			        <p th:text="${adresse.nb_like}" class = "nbr_like_dislike">pas de like</p>
+			    </div>
+
+			    <div class = "dislike" >
+			        <img src = "img/articles/dislike.png" alt="dislike">
+			        <p th:text="${adresse.nb_dislike}" class = "nbr_like_dislike">pas de dislike</p>
+			    </div>
+			</figure>
+
+		</div>
+
+	</button><!-- bouton pour dérouler le block et afficher l'article-->
+
+	<div class="fiche"><!-- conteneur pour cacher les articles -->
+			<figure>
+				<img class = "article_image" th:src="${article.lien_image" alt="avis sur le point de départ">
+			</figure>
+
+		<div class = "informations">
+			<div id="googleMap_b0" class = "googleMap" style="width:330px;height:330px;"></div>
+
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2mkwcbPGt6Hm9069FkJo3czQ96SKkpoE&callback=myMap_b"></script>
+
+			<figure class = "liker_deliker">
+				<button class = "liker"><img src = "img/articles/like.png"></button>
+				<button class = "deliker"><img src = "img/articles/dislike.png"></button>
+			</figure>
+
+			<div th:replace="~{fragments :: cont_com}" class = "commentaires"></div>
+
+		</div>
+
+	</div>
+</div>
+
+<div th:each="article : ${listBar}">
+					<button class="derouleur">
+
+						<div class = conteneur_titre>
+
+							<div class = "nom_adresse">
+								<p th:text="${article.Nom">Nom bar</p>
+							</div>
+
+	                        <figure th:replace="~{fragments :: avis}"></figure>
+
+						</div>
+
+					</button><!-- bouton pour dérouler le block et afficher l'article-->
+
+					<div class="fiche"><!-- conteneur pour cacher les articles -->
+	  					<figure>
+							<img class = "article_image" src = "img/articles/la_luck.jpg" alt="avis sur le point de départ">
+						</figure>
+
+						<div class = "informations">
+							<div id="googleMap_b0" class = "googleMap" style="width:330px;height:330px;"></div>
+
+							<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2mkwcbPGt6Hm9069FkJo3czQ96SKkpoE&callback=myMap_b"></script>
+
+							<figure class = "liker_deliker">
+								<button class = "liker"><img src = "img/articles/like.png"></button>
+								<button class = "deliker"><img src = "img/articles/dislike.png"></button>
+							</figure>
+
+							<div th:replace="~{fragments :: cont_com}" class = "commentaires"></div>
+
+						</div>
+
+					</div>
+				</div>
+
+				<button class="derouleur">
+
+					<div class = conteneur_titre>
+
+						<div class = "nom_adresse">
+							<p>Bibovino</p>
+						</div>
+
+						<figure th:replace="~{fragments :: avis}"></figure>
+
+					</div>
+
+				</button><!-- bouton pour dérouler le block et afficher l'article-->
+
+				<div class="fiche">
+
+  					<figure>
+						<img class = "article_image" src = "img/articles/bibovino.jpg" alt="avis sur le point de départ">
+					</figure>
+
+					<div class = "informations">
+
+						<div id="googleMap_b1" class = "googleMap" style="width:325px;height:325px;"></div>
+
+						<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2mkwcbPGt6Hm9069FkJo3czQ96SKkpoE&callback=myMap_b"></script>
+
+						<figure class = "liker_deliker">
+							<button class = "liker"><img src = "img/articles/like.png"></button>
+							<button class = "deliker"><img src = "img/articles/dislike.png"></button>
+						</figure>
+
+						<div class = "commentaires">
+
+							<button class = "derouleur commentaire"><span>Ajouter un commentaire</span></button>
+
+							<div th:replace="~{fragments :: ajout_commentaire}"></div>
+
+					  		<div class = "les_commentaires">
+
+                                <div th:replace="~{fragments :: commentaires('Paul Dupuis', 'Vraiment très sympa ce bar')}"></div>
+
+                                <div th:replace="~{fragments :: commentaires('Paul Dupuis', 'Vraiment très sympa ce bar')}"></div>
+
+                                <div th:replace="~{fragments :: commentaires('Paul Dupuis', 'Vraiment très sympa ce bar')}"></div>
+
+                                <div th:replace="~{fragments :: commentaires('Paul Dupuis', 'Vraiment très sympa ce bar')}"></div>
+					  		</div>
+				  		</div>
+
+					</div>
+
+				</div>
+
+				<button class="derouleur">
+
+					<div class = conteneur_titre>
+
+						<div class = "nom_adresse">
+							<p>Le point de départ</p>
+						</div>
+
+                        <figure th:replace="~{fragments :: avis}"></figure>
+
+					</div>
+
+				</button><!-- bouton pour dérouler le block et afficher l'article-->
+
+				<div class="fiche">
+
+  					<figure>
+						<img class = "article_image" src = "img/articles/point_de_depart.jpg" alt="avis sur le point de départ">
+					</figure>
+
+					<div class = "informations">
+
+						<div id="googleMap_b2" class = "googleMap" style="width:325px;height:325px;"></div>
+
+						<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2mkwcbPGt6Hm9069FkJo3czQ96SKkpoE&callback=myMap_b"></script>
+
+						<figure class = "liker_deliker">
+							<button class = "liker"><img src = "img/articles/like.png"></button>
+							<button class = "deliker"><img src = "img/articles/dislike.png"></button>
+						</figure>
+
+						<div class = "commentaires">
+
+							<button class = "derouleur commentaire"><span>Ajouter un commentaire</span></button>
+
+							<div th:replace="~{fragments :: ajout_commentaire}"></div>
+
+					  		<div class = "les_commentaires">
+
+                                <div th:replace="~{fragments :: commentaires('Paul Dupuis', 'Vraiment très sympa ce bar')}"></div>
+
+                                <div th:replace="~{fragments :: commentaires('Paul Dupuis', 'Vraiment très sympa ce bar')}"></div>
+
+                                <div th:replace="~{fragments :: commentaires('Paul Dupuis', 'Vraiment très sympa ce bar')}"></div>
+
+                                <div th:replace="~{fragments :: commentaires('Paul Dupuis', 'Vraiment très sympa ce bar')}"></div>
+					  		</div>
+				  		</div>
+
+					</div>
+
+				</div>
+
+				<button class="derouleur">
+
+					<div class = conteneur_titre>
+
+						<div class = "nom_adresse">
+							<p>L'Adresse</p>
+						</div>
+
+                        <figure th:replace="~{fragments :: avis}"></figure>
+
+					</div>
+
+				</button><!-- bouton pour dérouler le block et afficher l'article-->
+
+				<div class="fiche">
+  					<figure>
+						<img class = "article_image" src = "img/articles/l_adresse.jpg" alt="avis sur le point de départ">
+					</figure>
+
+					<div class = "informations">
+
+                        <div id="googleMap_b3" class = "googleMap" style="width:325px;height:325px;"></div>
+
+						<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2mkwcbPGt6Hm9069FkJo3czQ96SKkpoE&callback=myMap_b"></script>
+
+						<figure class = "liker_deliker">
+							<button class = "liker"><img src = "img/articles/like.png"></button>
+							<button class = "deliker"><img src = "img/articles/dislike.png"></button>
+						</figure>
+
+						<div class = "commentaires">
+
+							<button class = "derouleur commentaire"><span>Ajouter un commentaire</span></button>
+
+							<div th:replace="~{fragments :: ajout_commentaire}"></div>
+
+					  		<div class = "les_commentaires">
+
+                                <div th:replace="~{fragments :: commentaires('Paul Dupuis', 'Vraiment très sympa ce bar')}"></div>
+
+                                <div th:replace="~{fragments :: commentaires('Paul Dupuis', 'Vraiment très sympa ce bar')}"></div>
+
+                                <div th:replace="~{fragments :: commentaires('Paul Dupuis', 'Vraiment très sympa ce bar')}"></div>
+
+                                <div th:replace="~{fragments :: commentaires('Paul Dupuis', 'Vraiment très sympa ce bar')}"></div>
+					  		</div>
+				  		</div>
+
+					</div>
+
+				</div>
+
+				<button class="derouleur">
+
+					<div class = conteneur_titre>
+
+						<div class = "nom_adresse">
+							<p>la Capsule</p>
+						</div>
+
+                        <figure th:replace="~{fragments :: avis}"></figure>
+
+					</div>
+
+				</button><!-- bouton pour dérouler le block et afficher l'article-->
+
+				<div class="fiche">
+  					<figure>
+						<img class = "article_image" src = "img/articles/la_capsule.jpg" alt="avis sur le point de départ">
+					</figure>
+
+					<div class = "informations">
+
+						<div id="googleMap_b4" class = "googleMap" style="width:325px;height:325px;"></div>
+
+						<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2mkwcbPGt6Hm9069FkJo3czQ96SKkpoE&callback=myMap_b"></script>
+
+						<figure class = "liker_deliker">
+							<button class = "liker"><img src = "img/articles/like.png"></button>
+							<button class = "deliker"><img src = "img/articles/dislike.png"></button>
+						</figure>
+
+						<div class = "commentaires">
+
+							<button class = "derouleur commentaire"><span>Ajouter un commentaire</span></button>
+
+							<div th:replace="~{fragments :: ajout_commentaire}"></div>
+
+					  		<div class = "les_commentaires">
+
+                                <div th:replace="~{fragments :: commentaires('Paul Dupuis', 'Vraiment très sympa ce bar')}"></div>
+
+                                <div th:replace="~{fragments :: commentaires('Paul Dupuis', 'Vraiment très sympa ce bar')}"></div>
+
+                                <div th:replace="~{fragments :: commentaires('Paul Dupuis', 'Vraiment très sympa ce bar')}"></div>
+
+                                <div th:replace="~{fragments :: commentaires('Paul Dupuis', 'Vraiment très sympa ce bar')}"></div>
+					  		</div>
+				  		</div>
+
+					</div>
+
+				</div>
+
+				<button class="derouleur">
+
+					<div class = conteneur_titre>
+
+						<div class = "nom_adresse">
+							<p>La part des anges</p>
+						</div>
+
+                        <figure th:replace="~{fragments :: avis}"></figure>
+
+					</div>
+
+				</button><!-- bouton pour dérouler le block et afficher l'article-->
+
+				<div class="fiche">
+  					<figure>
+						<img class = "article_image" src = "img/articles/la_part_des_anges.jpg" alt="avis sur le point de départ">
+					</figure>
+
+					<div class = "informations">
+
+						<div id="googleMap_b5" class = "googleMap" style="width:325px;height:325px;"></div>
+
+						<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2mkwcbPGt6Hm9069FkJo3czQ96SKkpoE&callback=myMap_b"></script>
+
+						<figure class = "liker_deliker">
+							<button class = "liker"><img src = "img/articles/like.png"></button>
+							<button class = "deliker"><img src = "img/articles/dislike.png"></button>
+						</figure>
+
+						<div class = "commentaires">
+
+							<button class = "derouleur commentaire"><span>Ajouter un commentaire</span></button>
+
+							<div th:replace="~{fragments :: ajout_commentaire}"></div>
+
+					  		<div class = "les_commentaires">
+
+                                <div th:replace="~{fragments :: commentaires('Paul Dupuis', 'Vraiment très sympa ce bar')}"></div>
+
+                                <div th:replace="~{fragments :: commentaires('Paul Dupuis', 'Vraiment très sympa ce bar')}"></div>
+
+                                <div th:replace="~{fragments :: commentaires('Paul Dupuis', 'Vraiment très sympa ce bar')}"></div>
+					  		</div>
+				  		</div>
+
+					</div>
+
+				</div>
+
+				<button class="derouleur">
+
+					<div class = conteneur_titre>
+
+						<div class = "nom_adresse">
+							<p>L'Australian</p>
+						</div>
+
+                        <figure th:replace="~{fragments :: avis}"></figure>
+
+					</div>
+
+				</button><!-- bouton pour dérouler le block et afficher l'article-->
+
+				<div class="fiche">
+  					<figure>
+						<img class = "article_image" src = "img/articles/point_de_depart.jpg" alt="avis sur le point de départ"	>
+					</figure>
+					<div class = "informations">
+
+						<div id="googleMap_b6" class = "googleMap" style="width:325px;height:325px;"></div>
+
+						<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2mkwcbPGt6Hm9069FkJo3czQ96SKkpoE&callback=myMap_b"></script>
+
+						<figure class = "liker_deliker">
+							<button class = "liker"><img src = "img/articles/like.png"></button>
+							<button class = "deliker"><img src = "img/articles/dislike.png"></button>
+						</figure>
+
+						<div class = "commentaires">
+
+							<button class = "derouleur commentaire"><span>Ajouter un commentaire</span></button>
+
+							<div th:replace="~{fragments :: ajout_commentaire}"></div>
+
+					  		<div class = "les_commentaires">
+
+                                <div th:replace="~{fragments :: commentaires('Paul Dupuis', 'Vraiment très sympa ce bar')}"></div>
+
+                                <div th:replace="~{fragments :: commentaires('Paul Dupuis', 'Vraiment très sympa ce bar')}"></div>
+
+                                <div th:replace="~{fragments :: commentaires('Paul Dupuis', 'Vraiment très sympa ce bar')}"></div>
+
+                                <div th:replace="~{fragments :: commentaires('Paul Dupuis', 'Vraiment très sympa ce bar')}"></div>
+					  		</div>
+				  		</div>
+
+					</div>
+
+				</div>
+
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    function myMap_b() {
+        var x = /*[[${x}]]*/"";
+        var y = /*[[${y}]]*/"";
+        var myCenter = new google.maps.LatLng(x,y);
+        var mapOptions = {center: myCenter, zoom: 13};
+        var mapb/*[[${map}]]*/= new google.maps.Map(document.getElementById(/*[[${map}]]*/"", mapOptions));
+        var markerb/*[[${map}]]*/ = new google.maps.Marker({position: myCenter});
+        markerb/*[[${map}]]*/.setMap(mapb/*[[${map}]]*/);
+    }
+    /*]]>*/
+</script>
+
+<script>
+    function $_GET(param){
+        var vars = {};
+        window.location.href.replace( location.hash, '' ).replace(
+            /[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
+            function( m, key, value ) { // callback
+                vars[key] = value !== undefined ? value : '';
+            }
+        );
+
+        if ( param ) {
+            return vars[param] ? vars[param] : null;
+        }
+        return vars;
+    }
+
+    window.onload=function() {
+        var ovrt = $_GET(id);
+        if (ovrt != null) {
+            var acc = document.getElementById(ovrt);
+            acc.classList.toggle("active");
+            var panel1 = this.nextElementSibling;
+            if (panel1.style.maxHeight) {
+                panel1.style.maxHeight = null;
+            } else {
+                panel1.style.maxHeight = panel1.scrollHeight + "px";
+            }
+        }
+    }
+
+    }
+</script>
+
+<div class="fiche"><!-- conteneur pour cacher les articles -->
+	<figure>
+		<img class = "article_image" th:src="${article.lien_image}" alt="avis sur le point de départ">
+	</figure>
+
+	<div class = "informations">
+
+		<div th:id="${map}"  class = "googleMap" style="width:330px;height:330px;"></div>
+
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2mkwcbPGt6Hm9069FkJo3czQ96SKkpoE&callback=myMap_b"></script>
+
+		<figure class = "liker_deliker">
+			<button class = "liker"><a th:href="'likebar?id='+${article.id}" ><img src = "img/articles/like.png"></a></button>
+			<button class = "deliker"><a th:href="'dislikebar?id='+${article.id}"><img  src = "img/articles/dislike.png"></a></button>
+		</figure>
+
+		<div class = "commentaires">
+
+			<button class = "derouleur commentaire"><span>Ajouter un commentaire</span></button>
+
+			<div class = "ajout_com">
+				<form class="commentaire" method="POST">
+					<div class="container">
+						<label><b>Prénom</b></label>
+						<input class = "admin_form" type="text" placeholder="Prénom" name="prenom" required>
+
+						<label><b>Nom</b></label>
+						<input class = "admin_form" type="text" placeholder="nom" name="nom" required>
+
+						<label><b>Commentaire</b></label>
+						<input class = "admin_form" type="text" placeholder="Votre commentaire" name = "commentaire" required>
+
+						<input type="hidden" name="id_article" th:value="${article.id}">
+
+						<button class = "validation" type="submit">Ajouter mon commentaire</button>
+					</div>
+				</form>
+			</div>
+
+			<div class = "les_commentaires">
+
+				<div th:each="commentaire : ${listCommentaire}" th:if="${article.id == commentaire.id_article}" class = "un_commentaire">
+					<p class = "titre">
+						<span th:text="${commentaire.prenom}" style="font-size: 0.8em">Prénom </span>
+						<span> </span>
+						<span th:text="${commentaire.nom}" style="font-size: 0.8em">Nom</span>
+						<span> </span>
+						<i><span th:text="${commentaire.date}" style="font-size: 0.5em"></span></i>
+					</p>
+					<p th:text="${commentaire.commentaire}" class = "commentaire_texte"></p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+<!-- partie administrateur -->
+
+<section class = "modification_2_2">
+
+	<h1>Modifier une carte "équipe"</h1>
+	<form action = "#">
+		<label><b>Position de la carte</b></label>
+		<input class = "admin_form" type="text" placeholder="Position" name="position" list = "position" required>
+
+		<datalist id = "position">
+			<option value = "1"></option>
+			<option value = "2"></option>
+			<option value = "3"></option>
+			<option value = "4"></option>
+			<option value = "5"></option>
+			<option value = "6"></option>
+			<option value = "7"></option>
+			<option value = "8"></option>
+			<option value = "9"></option>
+			<option value = "10"></option>
+			<option value = "11"></option>
+			<option value = "12"></option>
+		</datalist>
+
+		<label><b>Nom du Membre</b></label>
+		<input class = "admin_form" type="text" placeholder="Nom" name="nom" required>
+
+		<label><b>Fonction dans l'association</b></label>
+		<input class = "admin_form" type="text" placeholder="Fonction" name="fonction" required>
+
+		<label><b>Photo de présentation</b></label>
+		<input class = "admin_form" type="file" placeholder="Photo de présentation" name="presentation" required>
+
+		<button class = "derouleur commentaire" type="submit"><span>Modifier la présentation</span></button>
+	</form>
+
+</section>
+</div>
+</div>
+
+<div class = "section_droite">
+	<section class = "modification_2_1" >
+
+		<h1>Adresses recommandées</h1>
+
+		<table>
+
+			<tr>
+				<th>Id</th>
+				<th>Nom</th>
+				<th>Type</th>
+				<th>Adresse</th>
+				<th>Recommandée par</th>
+				<th>Adresse Mail</th>
+				<th>Supprimer</th>
+			</tr>
+
+			<tr th:each="recommandation : ${listRecommandation}">
+				<td th:text="${recommandation.id}"></td>
+				<td th:text="${recommandation.adresse}">Nom inconnu</td>
+				<td th:text="${recommandation.type}">Type inconnu</td>
+				<td th:text="${recommandation.numero}+' '+${recommandation.rue}+', '+${recommandation.ville}">Adresse inconnue</td>
+				<td th:text="${recommandation.prenom}+' '+${recommandation.nom}">Nom et prénom inconnu</td>
+				<td th:text="${recommandation.mail}">Adresse mail inconnue</td>
+				<td><button class = "supprimer">Supprimer</button></td>
+			</tr>
+
+		</table>
+	</section>
+
+	<section class = "modification_2_2">
+
+		<h1>Modifier une carte "équipe"</h1>
+		<form action = "#">
+			<label><b>Position de la carte</b></label>
+			<input class = "admin_form" type="text" placeholder="Position" name="position" list = "position" required>
+
+			<datalist id = "position">
+				<option value = "1"></option>
+				<option value = "2"></option>
+				<option value = "3"></option>
+				<option value = "4"></option>
+				<option value = "5"></option>
+				<option value = "6"></option>
+				<option value = "7"></option>
+				<option value = "8"></option>
+				<option value = "9"></option>
+				<option value = "10"></option>
+				<option value = "11"></option>
+				<option value = "12"></option>
+			</datalist>
+
+			<label><b>Nom du Membre</b></label>
+			<input class = "admin_form" type="text" placeholder="Nom" name="nom" required>
+
+			<label><b>Fonction dans l'association</b></label>
+			<input class = "admin_form" type="text" placeholder="Fonction" name="fonction" required>
+
+			<label><b>Photo de présentation</b></label>
+			<input class = "admin_form" type="file" placeholder="Photo de présentation" name="presentation" required>
+
+			<button class = "derouleur commentaire" type="submit"><span>Modifier la présentation</span></button>
+		</form>
+
+	</section>
+</div>
+</div>
+
+<section class = "message">
+
+	<h1>Répondre aux messages</h1>
+
+	<div class = "les_commentaires">
+
+		<div th:each="commentaire : ${listCommentaire}" class = "un_commentaire">
+			<p th:text="${commentaire.nom}" class = "titre">Paul Dupuis <small><i>12/03/2017</i></small></p>
+			<p th:text="${commentaire.commentaire}" class = "commentaire_texte">Bonjour, je souhaiterais savoir si vous aviez une application mobile, pouvez-vous m'indiquer le lien s'il vous plait?</p>
+			<button class = "repondre" type="submit"><span>Répondre</span></button>
+		</div>
+
+		<div class = "un_commentaire">
+			<p class = "titre">Jack Dupond <small><i>24/07/2017</i></small></p>
+			<p class = "commentaire_texte">Bonjour, je souhaiterais savoir si vous rédigez également des articles sur les coiffeurs ?</p>
+			<button class = "repondre" type="submit"><span>Répondre</span></button>
+		</div>
+
+		<div class = "un_commentaire">
+			<p class = "titre">Henry Albert <small><i>02/02/2017</i></small></p>
+			<p class = "commentaire_texte">Bonjour, je souhaiterais savoir si vous aviez une application mobile, pouvez-vous m'indiquer le lien s'il vous plait?!</p>
+			<button class = "repondre" type="submit"><span>Répondre</span></button>
+		</div>
+
+		<div class = "un_commentaire">
+			<p class = "titre">Marc Dumont <small><i>18/11/2017</i></small></p>
+			<p class = "commentaire_texte">onjour, je souhaiterais savoir si vous rédigez également des articles sur les coiffeurs ?!</p>
+			<button class = "repondre" type="submit"><span>Répondre</span></button>
+		</div>
+	</div>
+
+
+</section>

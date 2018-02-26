@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang ="fr" xmlns:th="http://wwww.thymeleaf.org">
+
+    <head>
+        <title>L'Adresse</title>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" type = "image/x-icon" href = "img/logo_position.png"><!--logo affiché à coté du titre de la page-->
+        <link rel="stylesheet" href="../css/admin_all.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!-- utilisation d'une librairie pour les logos des réseaux sociaux dans le footer-->
+    </head>
+
+    <body>
+
+        <header>
+            <nav class="menu_principal">
+                <div class="boite_menu"><!-- boite qui contient les liens vers les autres pages pour les centrer-->
+                    <a href="admin">AJOUTER UN ARTICLE</a>
+                    <a href="recommander">LES RECOMMANDATIONS</a>
+                    <a href="commentaire">GERER LES COMMENTAIRES</a>
+                    <a href="deconnexion">DECONNEXION</a>
+                </div>
+            </nav>
+
+        </header>
+
+        <div id = "corps">
+            <section class = "modification_1">
+
+                <h1>Adresses recommandées</h1>
+
+                <table>
+
+                    <tr>
+                        <th>Id</th>
+                        <th>Nom</th>
+                        <th>Type</th>
+                        <th>Adresse</th>
+                        <th>Recommandée par</th>
+                        <th>Adresse Mail</th>
+                        <th>Supprimer</th>
+                    </tr>
+
+                    <tr th:each="recommandation : ${listRecommandation}">
+                        <td th:text="${recommandation.id}"></td>
+                        <td th:text="${recommandation.adresse}">Nom inconnu</td>
+                        <td th:text="${recommandation.type}">Type inconnu</td>
+                        <td th:text="${recommandation.numero}+' '+${recommandation.rue}+', '+${recommandation.ville}">Adresse inconnue</td>
+                        <td th:text="${recommandation.prenom}+' '+${recommandation.nom}">Nom et prénom inconnu</td>
+                        <td th:text="${recommandation.mail}">Adresse mail inconnue</td>
+                        <td><button class = "supprimer">Supprimer</button></td>
+                    </tr>
+
+                </table>
+            </section>
+        </div>
+    </body>
+</html>

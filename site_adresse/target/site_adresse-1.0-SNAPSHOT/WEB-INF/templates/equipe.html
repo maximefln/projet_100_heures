@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html lang="fr" xmlns:th="http://wwww.thymeleaf.org">
+
+	<head>
+		<title>L'Adresse</title>
+		<link rel="shortcut icon" type = "image/x-icon" href = "img/logo_position.png">
+		<meta charset='utf-8'>
+		<link rel="stylesheet" href="css/equipe.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+
+	<body>
+
+		<!-- fragment permettant d'afficher un menu identique sur toutes les pages-->
+
+		<header th:insert="~{fragments :: menu}"></header>
+		
+			<!-- création d'une bannière d'image qui défilent automatiquement-->
+
+			<section class="banniere_conteneur">
+
+				<div class="mySlides fade">
+  					<img src="img/accueil/banniere_1.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides fade">
+  					<img src="img/accueil/banniere_2.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides fade">
+  					<img src="img/accueil/banniere_3.jpg" style="width:100%">
+				</div>
+
+			</section>
+
+			<br>
+
+			<!-- Création de points pour afficher l'état d'avancement du défiler de la bannière -->
+
+			<div style="text-align:center">
+  				<span class="dot"></span> 
+  				<span class="dot"></span> 
+  				<span class="dot"></span> 
+			</div>
+
+			<!-- Script pour générer l'action de la bannière d'image -->
+			<script>
+				var slideIndex = 0;
+				showSlides();
+
+				function showSlides() {
+    				var i;
+    				var slides = document.getElementsByClassName("mySlides");
+    				var dots = document.getElementsByClassName("dot");
+    				for (i = 0; i < slides.length; i++) {
+       					slides[i].style.display = "none";  
+    				}
+    				slideIndex++;
+    				if (slideIndex > slides.length) {slideIndex = 1}    
+    				for (i = 0; i < dots.length; i++) {
+        				dots[i].className = dots[i].className.replace(" active", "");
+    				}
+    				slides[slideIndex-1].style.display = "block";  
+    				dots[slideIndex-1].className += " active";
+    				setTimeout(showSlides, 4000); //Change d'image toutes les quatre secondes
+				}
+			</script>
+
+		<section id="corps_equipe">
+
+			<p class = "citation">"La réussite appartient à tout le monde. C'est au travail d'équipe qu'en revient le mérite."</p> 
+			<p class = "citation"><em>Franck PICCARD</em></p>
+
+			<!-- Texte permettant de décrir l'association-->
+
+			<div id = "contenu_description">
+					<h2>🚩 Qu’est-ce que L’Adresse ? 🚩</h2>
+					<p class = "description_association">Il s’agit d’une association grâce à laquelle tu trouveras les meilleurs plans de Lille : bars, restaurants, médecins, friperies ; nous regroupons toutes les meilleures adresses de la ville afin de faciliter tes sorties et te faire découvrir de nouveaux endroits plus accueillants les uns que les autres.</p>
+					<h2>🚩 Qui sont les membres de l’équipe ? 🚩</h2>
+					<p class = "description_association">Derrière L’Adresse se cache une équipe de 13 étudiants d’HEI (répartis de la deuxième à la quatrième année) plus motivés les uns que les autres à trouver les meilleurs établissements où tu passeras tes soirées.</p>
+					<h2>🚩 Comment fonctionne L’Adresse ? 🚩</h2>
+					<p class = "description_association">Toutes les deux/trois semaines, nous recrutons un groupe d’étudiants afin qu’il se rende dans les établissements que nous souhaitons tester. Ceux-ci sont ensuite évalués en fonction de leur catégorie (bar, restaurant, etc.), puis notés suivant les critères d’un questionnaire rempli par les étudiants testeurs.</p>
+					<p class = "description_association">Après récupération de ce questionnaire, l’équipe de L’Adresse rédige un avis basé sur les impressions des étudiants et le diffuse sur son application. En échange, les étudiants reçoivent une compensation financière (5 euros en moyenne).</p>
+					<h2>🚩 Comment sont sélectionnées les adresses ? 🚩</h2>
+					<p class = "description_association">Les membres de l’équipe sélectionnent les adresses qui ont le plus plu aux étudiants. Les retours des testeurs sont déterminants dans la sélection finale. La rédaction peut également choisir de mettre en avant une nouveauté ou de faire découvrir aux nouveaux arrivants les incontournables de la ville.</p>
+					<h2>🚩 Comment sont évalués les établissements ? 🚩</h2>
+					<p class = "description_association">Les restaurants, bars ou autres sont notés grâce à un questionnaire fourni par l’équipe aux étudiants testeurs. Les avis récoltés permettent aux lecteurs de se repérer parmi les différentes adresses présentées.</p>
+					<p class = "description_association">Les critères d’évaluation sont variés : cadre, qualité du service, qualité des mets, présentation de la carte, propreté, hygiène, ambiance, rapport qualité/prix, etc.</p>
+					<h2>🚩 Comment nous contacter ? 🚩</h2>
+					<p class = "description_association">Si tu souhaites nous aider à découvrir de nouveaux lieux où profiter de tes soirées, et ainsi enrichir le répertoire de notre application tout au long de l’année, tu peux postuler ou nous envoyer tes bonnes adresses via celle-ci, disponible très prochainement sur Android et Apple Store. Profite de toutes les nouveautés dégotées pour toi sur cette application, et suis nos évènements sur notre compte Facebook : L'Adresse Hei</p>
+					<p class = "description_association">A très vite pour de nouvelles découvertes pleines de goûts ! </p>
+				</div>
+
+			<section id ="ligne_equipe">
+
+				<!-- Affichage de quatre membres par ligne -->
+
+				<!-- block contenant une image des membres de l'association avec une description qui s'affichent lors du passage de la souris -->
+
+				<div class="conteneur">
+  					<img src="img/equipe/maxime.jpg" alt="maxime" class="image_equipe">
+  					<div class="description">
+    					<div class="text_equipe">Maxime FILLION<br>Président</div>
+  					</div>
+				</div>
+
+				<div class="conteneur">
+  					<img src="img/equipe/vincent.jpg" alt="maxime" class="image_equipe">
+  					<div class="description">
+    					<div class="text_equipe">Vincent LANFRANCHI<br>Vice-Président</div>
+  					</div>
+				</div>
+
+				<div class="conteneur">
+  					<img src="img/equipe/marie_caroline.jpg" alt="maxime" class="image_equipe">
+  					<div class="description">
+    					<div class="text_equipe">Marie-Caroline BILLON<br>Secrétaire</div>
+  					</div>
+				</div>
+
+				<div class="conteneur">
+  					<img src="img/equipe/sarah.jpg" alt="maxime" class="image_equipe">
+  					<div class="description">
+    					<div class="text_equipe">Sarah NAVELLOU<br>Trésorière</div>
+  					</div>
+				</div>
+			
+			</section>
+
+			<section id = "ligne_equipe">
+
+				<div class="conteneur">
+  					<img src="img/equipe/nicolas.jpg" alt="Nicolas" class="image_equipe">
+  					<div class="description">
+    					<div class="text_equipe">Nicolas STRANGE<br>Responsable Communication</div>
+    				</div>
+				</div>
+
+				<div class="conteneur">
+  					<img src="img/equipe/lise.jpg" alt="Lise" class="image_equipe">
+  					<div class="description">
+    					<div class="text_equipe">Lise MOUQUET<br>Communication</div>
+  					</div>
+				</div>
+
+				<div class="conteneur">
+  					<img src="img/equipe/louis.jpg" alt="Louis" class="image_equipe">
+  					<div class="description">
+    					<div class="text_equipe">Louis GAS<br>Communication</div>
+  					</div>
+				</div>
+
+				<div class="conteneur">
+  					<img src="img/equipe/sebastien.jpg" alt="Sébastien" class="image_equipe">
+  					<div class="description">
+    					<div class="text_equipe">Sebastien AUBRY<br>Responsable Sponsors</div>
+  					</div>
+				</div>
+
+			</section>
+
+			<section id ="ligne_equipe">
+
+				<div class="conteneur">
+  					<img src="img/equipe/martin.jpg" alt="Martin" class="image_equipe">
+  					<div class="description">
+    					<div class="text_equipe">Martin COSTEAU<br>Sponsors</div>
+    				</div>
+				</div>
+
+				<div class="conteneur">
+  					<img src="img/equipe/alexandre.jpg" alt="Alexandre" class="image_equipe">
+  					<div class="description">
+    					<div class="text_equipe">Alexandre LOPEZ<br>Responsable Recrutement</div>
+    				</div>
+				</div>
+
+
+				<div class="conteneur">
+  					<img src="img/equipe/recrutement.jpg" alt="On recrute !" class="image_equipe">
+  					<div class="description">
+    					<div class="text_equipe">Place disponible<br>Recrutement</div>
+    				</div>
+				</div>
+
+
+				<div class="conteneur">
+  					<img src="img/equipe/recrutement.jpg" alt="On recrute ! " class="image_equipe">
+  					<div class="description">
+    					<div class="text_equipe">Place disponible<br>Sponsorst</div>
+    				</div>
+				</div>
+
+			</section>
+
+		</section>
+
+		<hr><!-- copie du footer en bas de chaque page -->
+
+		<!-- Footer contenant un lien vers différents supports de l'adresse -->
+
+		<footer th:replace="~{fragments :: footer}"></footer>
+
+	</body>
+
+</html>

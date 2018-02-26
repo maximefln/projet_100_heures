@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang ="fr" xmlns:th="http://wwww.thymeleaf.org">
+
+	<head>
+		<title>L'Adresse</title>
+		<meta charset="utf-8">
+		<link rel="shortcut icon" type = "image/x-icon" href = "img/logo_position.png"><!--logo affiché à coté du titre de la page-->
+		<link rel="stylesheet" href="../css/admin_all.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!-- utilisation d'une librairie pour les logos des réseaux sociaux dans le footer-->
+	</head>
+
+	<body>
+
+<!-- Menu de navigation en haut de la fenêtre-->
+			<header>
+				<nav class="menu_principal">
+					<div class="boite_menu"><!-- boite qui contient les liens vers les autres pages pour les centrer-->
+						<a href="admin">AJOUTER UN ARTICLE</a>
+						<a href="/admin/recommander">LES RECOMMANDATIONS</a>
+						<a href="/admin/commentaire">GERER LES COMMENTAIRES</a>
+						<a href="/admin/deconnexion">DECONNEXION</a>
+					</div>
+				</nav>
+
+			</header>
+
+			<div id = "corps">
+					<section class = "modification_1">
+
+						<h1>Ajouter un article</h1>
+
+						<form action = "#">
+							<label><b>Type de l'article</b></label>
+						    <input class = "admin_form" type="text" placeholder="Type" name="type" list = "type_lieu" required>
+
+				      		<datalist id = "type_lieu">
+								<option value = "Bar"></option>
+								<option value = "Restaurant"></option>
+								<option value = "Musée"></option>
+								<option value = "Autre"></option>
+							</datalist>
+
+			      			<label><b>Nom de l'adresse</b></label>
+			      			<input class = "admin_form" type="text" placeholder="Nom" name="nom" required>
+
+			      			<label><b>Nom de la personne ayant visité le bar</b></label>
+			      			<input class = "admin_form" type="text" placeholder="Nom de la personne" name="nom_personne" required>
+			        
+			      			<label><b>Note par l'association sur 5</b></label>
+			      			<input class = "admin_form" type="number" placeholder="Note" name="note" required>
+
+			      			<label><b>Courte Description</b></label>
+			      			<input class = "admin_form" type="text" placeholder="une description en quelques mots" name="nom" required>
+
+			      			<label><b>Coordonnées sur google map</b></label>
+			      			<input class = "admin_form" type="text" placeholder="(50.090656;3.342751)" name="nom" required>
+
+			      			<label><b>Photo de l'article</b></label>
+			      			<input class = "admin_form" type="file" placeholder="Photo de l'article" name="article" required>
+
+			      			<button class = "derouleur commentaire" type="submit"><span>Ajouter l'article</span></button>
+			      		</form>
+			      	</section>
+
+			</div>
+
+	</body>
+
+</html>

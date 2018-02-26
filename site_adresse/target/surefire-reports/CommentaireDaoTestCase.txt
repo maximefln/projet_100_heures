@@ -1,9 +1,9 @@
 -------------------------------------------------------------------------------
 Test set: CommentaireDaoTestCase
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 1.657 sec <<< FAILURE!
-ShouldListCommentaire(CommentaireDaoTestCase)  Time elapsed: 0.484 sec  <<< ERROR!
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Access denied for user 'whecq0vmcott98zf'@'%' to database 'projet_100h'
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 1.905 sec <<< FAILURE!
+ShouldListCommentaire(CommentaireDaoTestCase)  Time elapsed: 0.563 sec  <<< ERROR!
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Access denied for user 'b0lo5x6m6chv9lze'@'%' to database 'projet_100h'
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -50,8 +50,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Access denied for use
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-shouldDeleteCommentaire(CommentaireDaoTestCase)  Time elapsed: 0.594 sec  <<< ERROR!
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Access denied for user 'whecq0vmcott98zf'@'%' to database 'projet_100h'
+shouldDeleteCommentaire(CommentaireDaoTestCase)  Time elapsed: 0.719 sec  <<< ERROR!
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Access denied for user 'b0lo5x6m6chv9lze'@'%' to database 'projet_100h'
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -98,8 +98,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Access denied for use
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-shouldAddCommentaire(CommentaireDaoTestCase)  Time elapsed: 0.563 sec  <<< ERROR!
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Access denied for user 'whecq0vmcott98zf'@'%' to database 'projet_100h'
+shouldAddCommentaire(CommentaireDaoTestCase)  Time elapsed: 0.623 sec  <<< ERROR!
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Access denied for user 'b0lo5x6m6chv9lze'@'%' to database 'projet_100h'
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)

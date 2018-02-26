@@ -22,11 +22,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="creation_table.sql" pinned="false" current-in-tab="true">
+      <file leaf-file-name="creation_table.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/sql/creation_table.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="848">
-              <caret line="71" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+              <caret line="71" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
               <folding>
                 <marker date="1519593044937" expanded="true" signature="17:50" ph="DROP SCHEMA " />
                 <marker date="1519593044937" expanded="true" signature="52:77" ph="CREATE SCHEM... projet_100h" />
@@ -36,6 +36,41 @@
                 <marker date="1519593044937" expanded="true" signature="1129:3149" ph="INSERT INTO adresse... " />
                 <marker date="1519593044937" expanded="true" signature="3151:4172" ph="INSERT INTO adresse... " />
                 <marker date="1519593044937" expanded="true" signature="4174:6680" ph="INSERT INTO adresse... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArticleDaoTestCase.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ArticleDaoTestCase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="714">
+              <caret line="57" column="56" lean-forward="true" selection-start-line="57" selection-start-column="56" selection-end-line="57" selection-end-column="56" />
+              <folding>
+                <marker date="1519649178706" expanded="true" signature="808:1728" ph="CREATE TABLE... adresse" />
+                <marker date="1519649178706" expanded="true" signature="1769:2255" ph="CREATE TABLE... commentaire" />
+                <marker date="1519649178706" expanded="true" signature="2296:2882" ph="CREATE TABLE... recommandation" />
+                <marker date="1519649178706" expanded="true" signature="2923:3229" ph="INSERT INTO adresse... " />
+                <marker date="1519649178706" expanded="true" signature="3271:3581" ph="INSERT INTO adresse... " />
+                <marker date="1519649178706" expanded="true" signature="3623:3938" ph="INSERT INTO adresse... " />
+                <marker date="1519649178706" expanded="true" signature="3980:4311" ph="INSERT INTO adresse... " />
+                <marker date="1519649178706" expanded="true" signature="4353:4681" ph="INSERT INTO adresse... " />
+                <marker date="1519649178706" expanded="true" signature="4723:5058" ph="INSERT INTO adresse... " />
+                <marker date="1519649178706" expanded="true" signature="5100:5433" ph="INSERT INTO adresse... " />
+                <marker date="1519649178706" expanded="true" signature="5475:5825" ph="INSERT INTO adresse... " />
+                <marker date="1519649178706" expanded="true" signature="7699:7731" ph="SELECT * FRO... adresse" />
+                <marker date="1519649178706" expanded="true" signature="8833:8865" ph="SELECT * FRO... adresse" />
+                <marker date="1519649178706" expanded="true" signature="9987:10019" ph="SELECT * FRO... adresse" />
               </folding>
             </state>
           </provider>
@@ -52,6 +87,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/dao/DataSourceProvider.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/ArticleDaoTestCase.java" />
       </list>
     </option>
   </component>
@@ -61,7 +98,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -123,6 +160,19 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="sql" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="site_adresse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site_adresse" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="site_adresse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site_adresse" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -244,15 +294,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1519648733003</updated>
-      <workItem from="1519648735472" duration="274000" />
+      <workItem from="1519648735472" duration="440000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="274000" />
+    <option name="totallyTimeSpent" value="440000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1047" extended-state="1" />
+    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -307,7 +357,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/sql/creation_table.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="848">
-          <caret line="71" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <caret line="71" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding>
             <marker date="1519593044937" expanded="true" signature="17:50" ph="DROP SCHEMA " />
             <marker date="1519593044937" expanded="true" signature="52:77" ph="CREATE SCHEM... projet_100h" />
@@ -317,6 +367,37 @@
             <marker date="1519593044937" expanded="true" signature="1129:3149" ph="INSERT INTO adresse... " />
             <marker date="1519593044937" expanded="true" signature="3151:4172" ph="INSERT INTO adresse... " />
             <marker date="1519593044937" expanded="true" signature="4174:6680" ph="INSERT INTO adresse... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ArticleDaoTestCase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="57" column="56" lean-forward="true" selection-start-line="57" selection-start-column="56" selection-end-line="57" selection-end-column="56" />
+          <folding>
+            <marker date="1519649178706" expanded="true" signature="808:1728" ph="CREATE TABLE... adresse" />
+            <marker date="1519649178706" expanded="true" signature="1769:2255" ph="CREATE TABLE... commentaire" />
+            <marker date="1519649178706" expanded="true" signature="2296:2882" ph="CREATE TABLE... recommandation" />
+            <marker date="1519649178706" expanded="true" signature="2923:3229" ph="INSERT INTO adresse... " />
+            <marker date="1519649178706" expanded="true" signature="3271:3581" ph="INSERT INTO adresse... " />
+            <marker date="1519649178706" expanded="true" signature="3623:3938" ph="INSERT INTO adresse... " />
+            <marker date="1519649178706" expanded="true" signature="3980:4311" ph="INSERT INTO adresse... " />
+            <marker date="1519649178706" expanded="true" signature="4353:4681" ph="INSERT INTO adresse... " />
+            <marker date="1519649178706" expanded="true" signature="4723:5058" ph="INSERT INTO adresse... " />
+            <marker date="1519649178706" expanded="true" signature="5100:5433" ph="INSERT INTO adresse... " />
+            <marker date="1519649178706" expanded="true" signature="5475:5825" ph="INSERT INTO adresse... " />
+            <marker date="1519649178706" expanded="true" signature="7699:7731" ph="SELECT * FRO... adresse" />
+            <marker date="1519649178706" expanded="true" signature="8833:8865" ph="SELECT * FRO... adresse" />
+            <marker date="1519649178706" expanded="true" signature="9987:10019" ph="SELECT * FRO... adresse" />
           </folding>
         </state>
       </provider>

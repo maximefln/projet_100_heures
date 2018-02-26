@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="ArticleDaoTestCase" time="3.218" errors="4" skipped="0">
+<testsuite tests="4" failures="0" name="ArticleDaoTestCase" time="3.313" errors="4" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_161\jre\bin"/>
@@ -65,7 +65,7 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="ArticleDaoTestCase" name="shouldGetArticle" time="1.171">
+  <testcase classname="ArticleDaoTestCase" name="shouldGetArticle" time="1.266">
     <error message="Table &apos;adresse&apos; already exists" type="com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException">com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table &apos;adresse&apos; already exists
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -114,7 +114,7 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </error>
   </testcase>
-  <testcase classname="ArticleDaoTestCase" name="shouldListArticle" time="0.657">
+  <testcase classname="ArticleDaoTestCase" name="shouldListArticle" time="0.687">
     <error message="Table &apos;adresse&apos; already exists" type="com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException">com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table &apos;adresse&apos; already exists
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -163,7 +163,7 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </error>
   </testcase>
-  <testcase classname="ArticleDaoTestCase" name="shouldLikeArticle" time="0.672">
+  <testcase classname="ArticleDaoTestCase" name="shouldLikeArticle" time="0.75">
     <error message="Table &apos;adresse&apos; already exists" type="com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException">com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table &apos;adresse&apos; already exists
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -212,7 +212,7 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </error>
   </testcase>
-  <testcase classname="ArticleDaoTestCase" name="shouldDislikeArticle" time="0.718">
+  <testcase classname="ArticleDaoTestCase" name="shouldDislikeArticle" time="0.61">
     <error message="Table &apos;adresse&apos; already exists" type="com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException">com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table &apos;adresse&apos; already exists
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)

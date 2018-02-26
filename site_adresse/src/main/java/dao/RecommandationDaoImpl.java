@@ -32,7 +32,7 @@ public class RecommandationDaoImpl implements RecommandationDao {
 
     @Override
     public List<Recommandation> listRecommandation() {
-        String query = "SELECT * FROM projet_100h.recommandation ORDER BY recommandation.id asc;";
+        String query = "SELECT * FROM recommandation ORDER BY recommandation.id asc;";
         List<Recommandation> listRecommandation = new ArrayList();
         try (
                 Connection connection = DataSourceProvider.getDataSource().getConnection();
@@ -71,7 +71,7 @@ public class RecommandationDaoImpl implements RecommandationDao {
 
     @Override
     public void addRecommandation(Recommandation recommandation) {
-        String query = "INSERT INTO projet_100h.recommandation(nom, prenom, mail, adresse, type, numero, rue, ville) VALUES (?,?,?,?,?,?,?,?)";
+        String query = "INSERT INTO recommandation(nom, prenom, mail, adresse, type, numero, rue, ville) VALUES (?,?,?,?,?,?,?,?)";
         try( Connection connection = DataSourceProvider.getDataSource().getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setString(1, recommandation.getNom());
@@ -100,7 +100,7 @@ public class RecommandationDaoImpl implements RecommandationDao {
 
     @Override
     public void deleteRecommandation(int id) {
-        String query = "DELETE FROM projet_100h.recommandation WHERE id=?;";
+        String query = "DELETE FROM recommandation WHERE id=?;";
         try (Connection connection = DataSourceProvider.getDataSource().getConnection();
         PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setInt(1, id);

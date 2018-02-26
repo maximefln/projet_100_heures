@@ -27,7 +27,7 @@ public class CommentaireDaoImpl implements CommentaireDao {
 
     @Override
     public List<Commentaire> listCommentaire() {
-        String query = "SELECT * FROM projet_100h.commentaire ORDER BY commentaire.id DESC;";
+        String query = "SELECT * FROM commentaire ORDER BY commentaire.id DESC;";
         List<Commentaire> listCommentaire = new ArrayList();
 
         try (
@@ -65,7 +65,7 @@ public class CommentaireDaoImpl implements CommentaireDao {
     @Override
     public void addCommentaire(Commentaire commentaire, Integer id_article){
         try (Connection connection = DataSourceProvider.getDataSource().getConnection();
-             PreparedStatement statement = connection.prepareStatement(("INSERT INTO projet_100h.commentaire(date, nom, prenom, commentaire, id_article) VALUES (?,?,?,?,?)"))){
+             PreparedStatement statement = connection.prepareStatement(("INSERT INTO commentaire(date, nom, prenom, commentaire, id_article) VALUES (?,?,?,?,?)"))){
                 statement.setDate(1, Date.valueOf(commentaire.getDate()));
                 statement.setString(2, commentaire.getNom());
                 statement.setString(3, commentaire.getPrenom());
@@ -89,7 +89,7 @@ public class CommentaireDaoImpl implements CommentaireDao {
 
     @Override
     public void deleteCommentaire(int id) {
-        String query = "DELETE FROM projet_100h.commentaire WHERE id=?;";
+        String query = "DELETE FROM commentaire WHERE id=?;";
         try (Connection connection = DataSourceProvider.getDataSource().getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setInt(1, id);

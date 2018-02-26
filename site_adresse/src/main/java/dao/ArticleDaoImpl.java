@@ -33,7 +33,7 @@ public class ArticleDaoImpl implements ArticleDao {
 
     @Override
     public List<Article> listArticle() {
-        String query = "SELECT * FROM projet_100h.adresse ORDER BY adresse.date_ajout DESC;";
+        String query = "SELECT * FROM adresse ORDER BY adresse.date_ajout DESC;";
         List<Article> listArticle = new ArrayList();
        // DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/MM/yyyy");
         try (
@@ -75,7 +75,7 @@ public class ArticleDaoImpl implements ArticleDao {
 
     @Override
     public void likeArticle(Integer id){
-        String query = "UPDATE projet_100h.adresse SET nb_like=nb_like+1 WHERE id=?";
+        String query = "UPDATE adresse SET nb_like=nb_like+1 WHERE id=?";
         try( Connection connection = DataSourceProvider.getDataSource().getConnection();
             PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setInt(1, id);
@@ -97,7 +97,7 @@ public class ArticleDaoImpl implements ArticleDao {
 
     @Override
     public void dislikeArticle(Integer id){
-        String query = "UPDATE projet_100h.adresse SET nbdislike=nbdislike+1 WHERE id=?";
+        String query = "UPDATE adresse SET nbdislike=nbdislike+1 WHERE id=?";
         try( Connection connection = DataSourceProvider.getDataSource().getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setInt(1, id);
@@ -122,7 +122,7 @@ public class ArticleDaoImpl implements ArticleDao {
 
     @Override
     public Article getArticle (Integer id) {
-        String query = "SELECT * FROM projet_100h.adresse WHERE id=?";
+        String query = "SELECT * FROM adresse WHERE id=?";
         try( Connection connection = DataSourceProvider.getDataSource().getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setInt(1, id);
